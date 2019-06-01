@@ -1,4 +1,4 @@
-const Env = use('Env')
+const Env = use('Env');
 
 export = {
   /*
@@ -183,8 +183,8 @@ export = {
     */
     console: {
       driver: 'console',
+      level: 'info',
       name: 'adonis-app',
-      level: 'info'
     },
 
     /*
@@ -200,9 +200,9 @@ export = {
     */
     file: {
       driver: 'file',
-      name: 'adonis-app',
       filename: 'adonis.log',
-      level: 'info'
+      level: 'info',
+      name: 'adonis-app',
     }
   }
-}
+};

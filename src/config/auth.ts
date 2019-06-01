@@ -1,4 +1,4 @@
-const Env = use('Env')
+const Env = use('Env');
 
 export = {
   /*
@@ -25,11 +25,11 @@ export = {
   |
   */
   session: {
-    serializer: 'lucid',
     model: 'App/Models/User',
+    password: 'password',
     scheme: 'session',
+    serializer: 'lucid',
     uid: 'email',
-    password: 'password'
   },
 
   /*
@@ -46,11 +46,11 @@ export = {
   |
   */
   basic: {
-    serializer: 'lucid',
     model: 'App/Models/User',
+    password: 'password',
     scheme: 'basic',
+    serializer: 'lucid',
     uid: 'email',
-    password: 'password'
   },
 
   /*
@@ -63,13 +63,13 @@ export = {
   |
   */
   jwt: {
-    serializer: 'lucid',
     model: 'App/Models/User',
-    scheme: 'jwt',
-    uid: 'email',
-    password: 'password',
     options: {
       secret: Env.get('APP_KEY')
-    }
+    },
+    password: 'password',
+    scheme: 'jwt',
+    serializer: 'lucid',
+    uid: 'email',
   }
-}
+};

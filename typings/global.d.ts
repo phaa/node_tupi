@@ -2,4 +2,4 @@
 /// <reference path="./@adonisjs/module.d.ts" />
 /// <reference path="./@adonisjs/cache.d.ts" />
 
-//Custom defined.
+// Custom defined.

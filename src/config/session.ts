@@ -1,4 +1,4 @@
-const Env = use('Env')
+const Env = use('Env');
 
 export = {
   /*
@@ -62,8 +62,8 @@ export = {
   */
   cookie: {
     httpOnly: true,
+    path: '/',
     sameSite: true,
-    path: '/'
   },
 
   /*
@@ -89,4 +89,4 @@ export = {
   |
   */
   redis: 'self::redis.local'
-}
+};

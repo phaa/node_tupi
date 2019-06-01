@@ -1,4 +1,4 @@
-//module exports
+// module exports
 declare module '@adonisjs/ignitor' {
     import { Ignitor } from "@adonisjs";
     const hooks: { before: Ignitor.Hooks, after: Ignitor.Hooks };
@@ -8,13 +8,13 @@ declare module '@adonisjs/ignitor' {
 }
 
 declare module '@adonisjs/fold' {
-    import { Fold } from "@adonisjs"
+    import { Fold } from "@adonisjs";
     const ioc : Fold.Ioc;
     const ServiceProvider : Fold.ServiceProvider;
     const registrar : Fold.Registrar;
     const resolver : Fold.Resolver;
 
-    export { ioc, ServiceProvider, registrar, resolver }
+    export { ioc, ServiceProvider, registrar, resolver };
 }
 
 declare namespace NE {
@@ -34,7 +34,7 @@ declare namespace NE {
      * @class LogicalException
      */
     interface LogicalException extends Error {
-        new(message: string, status?: number, code?: number, errShLink?: string): LogicalException; 
+        new(message: string, status?: number, code?: number, errShLink?: string): LogicalException;
     }
 
     interface DomainException extends LogicalException { }
@@ -62,7 +62,7 @@ declare module '@adonisjs/generic-exceptions' {
          * @return {InvalidArgumentException}
          */
         missingParameter(method : string, parameterName : string, position : string | number): InvalidArgumentException;
-            
+
         /**
          * Throw exception when the parameter received is invalid
          *
@@ -75,7 +75,7 @@ declare module '@adonisjs/generic-exceptions' {
          * @return {InvalidArgumentException}
          */
         invalidParameter(errorMessage : string, originalValue : any): InvalidArgumentException;
-            
+
         /**
          * Invoke instance of this class with a custom message
          * status and error code
@@ -110,7 +110,7 @@ declare module '@adonisjs/generic-exceptions' {
          * @return {RuntimeException}
          */
         missingConfig(key : string, configLocation : string): RuntimeException;
-            
+
         /**
          * This exception is raised when appKey is missing
          * inside the config file but required to make
@@ -123,7 +123,7 @@ declare module '@adonisjs/generic-exceptions' {
          * @return {RuntimeException}
          */
         missingAppKey(provider : string): RuntimeException;
-            
+
         /**
          * This exception is raised when environment variable
          * is not defined, but is required for app operation.
@@ -135,7 +135,7 @@ declare module '@adonisjs/generic-exceptions' {
          * @return {RuntimeException}
          */
         missingEnvKey(key : String): RuntimeException;
-            
+
         /**
          * This exception is raised when configuration is not
          * complete for a given config file or key
@@ -148,8 +148,8 @@ declare module '@adonisjs/generic-exceptions' {
          *
          * @return {RuntimeException}
          */
-        incompleteConfig(missingKeys: Array<string>, file: string, forKey: string): RuntimeException;
-            
+        incompleteConfig(missingKeys: string[], file: string, forKey: string): RuntimeException;
+
         /**
          * Invoke instance of this class with a custom message
          * status and error code
@@ -165,7 +165,7 @@ declare module '@adonisjs/generic-exceptions' {
         invoke(message : string, status? : number, code? : string): RuntimeException;
     }
 
-    const LogicalException: LogicalException
+    const LogicalException: LogicalException;
     const HttpException: HttpException;
     const InvalidArgumentException: InvalidArgumentException;
     const RuntimeException: RuntimeException;
@@ -175,15 +175,15 @@ declare module '@adonisjs/generic-exceptions' {
 
 declare module "@adonisjs/lucid/src/Exceptions" {
     import GE = require("@adonisjs/generic-exceptions");
-    
+
     /**
      * Class to throw runtime exceptions
-     * 
+     *
      * @class RuntimeException
      * @constructor
      */
-    interface RuntimeException extends GE.RuntimeException{
-            
+    interface RuntimeException extends GE.RuntimeException {
+
         /**
          * This exception is raised when user is trying to use an
          * undefined database connection
@@ -195,7 +195,7 @@ declare module "@adonisjs/lucid/src/Exceptions" {
          * @return {Object}
          */
         missingDatabaseConnection(name : string): RuntimeException;
-            
+
         /**
          * This exception is raised when user is trying to query
          * relationships from an unsaved model instance
@@ -207,7 +207,7 @@ declare module "@adonisjs/lucid/src/Exceptions" {
          * @return {Object}
          */
         unSavedModel(name : string): RuntimeException;
-            
+
         /**
          * This exception is raised when an undefined relation is
          * fetched or referenced within the code
@@ -220,7 +220,7 @@ declare module "@adonisjs/lucid/src/Exceptions" {
          * @return {Object}
          */
         undefinedRelation(relation : string, name : string): RuntimeException;
-            
+
         /**
          * This exception is raised when nested relationships are not
          * supported. `withCount` method is an example of same
@@ -246,7 +246,7 @@ declare module "@adonisjs/lucid/src/Exceptions" {
          * @return {Object}
          */
         overRidingRelation(relation : string): RuntimeException;
-            
+
         /**
          * This exception is raised when migrations are locked but
          * still someone is trying to migrate the database.
@@ -262,18 +262,18 @@ declare module "@adonisjs/lucid/src/Exceptions" {
 
     /**
      * Class to lucid model related exceptions
-     * 
+     *
      * @class ModelException
      * @constructor
      */
-    interface ModelException extends GE.LogicalException{
+    interface ModelException extends GE.LogicalException {
         deletedInstance(name : string): ModelException;
     }
 
     /**
      * Exception thrown when a row is not found using
      * findOrFail style methods.
-     * 
+     *
      * @class ModelNotFoundException
      * @constructor
      */
@@ -284,11 +284,11 @@ declare module "@adonisjs/lucid/src/Exceptions" {
     /**
      * Class to throw exceptions related to model
      * relations
-     * 
+     *
      * @class ModelRelationException
      * @constructor
      */
-    interface ModelRelationException extends GE.LogicalException{  
+    interface ModelRelationException extends GE.LogicalException {
         /**
          * This exception is raised when an unsupported method
          * is called on a model relation. Naturally `xxx` is
@@ -304,7 +304,7 @@ declare module "@adonisjs/lucid/src/Exceptions" {
          * @return {Object}
          */
         unSupportedMethod(method : string, relation : string): ModelRelationException;
-            
+
         /**
          * This exception is raised when related model method is
          * executed for which the model needs to be persisted
@@ -317,7 +317,7 @@ declare module "@adonisjs/lucid/src/Exceptions" {
          * @return {Object}
          */
         unsavedModelInstance(message : string): ModelRelationException;
-            
+
         /**
          * Exception thrown when trying to set flags on pivot
          * model instance and when pivotModel is explicitly

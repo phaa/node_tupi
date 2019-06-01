@@ -77,8 +77,8 @@ export = {
   |
   */
   xss: {
+    enableOnOldIE: false,
     enabled: true,
-    enableOnOldIE: false
   },
 
   /*
@@ -130,14 +130,14 @@ export = {
   |
   */
   csrf: {
-    enable: true,
-    methods: ['POST', 'PUT', 'DELETE'],
-    filterUris: [],
     cookieOptions: {
       httpOnly: false,
-      sameSite: true,
+      maxAge: 7200,
       path: '/',
-      maxAge: 7200
-    }
+      sameSite: true,
+    },
+    enable: true,
+    filterUris: [],
+    methods: ['POST', 'PUT', 'DELETE'],
   }
-}
+};
