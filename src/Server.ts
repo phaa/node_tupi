@@ -14,10 +14,11 @@
 |     Also you can preload files by calling `preLoad('path/to/file')` method.
 |     Make sure to pass relative path from the project root.
 */
+import fold from '@adonisjs/fold';
+import { Ignitor } from "@adonisjs/ignitor";
 
-import { Ignitor } from "@adonisjs/ignitor"
-
-new Ignitor(require('@adonisjs/fold'))
+new Ignitor(fold)
   .appRoot(__dirname)
   .fireHttpServer()
-  .catch(console.error)
+  // tslint:disable-next-line:no-console
+  .catch(console.error);

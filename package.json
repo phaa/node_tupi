@@ -1,8 +1,8 @@
 {
-  "name": "adonis-fullstack-app",
-  "version": "4.1.0",
+  "name": "node_tupi",
+  "version": "1.0.0",
   "adonis-version": "4.1.0",
-  "description": "The fullstack application boilerplate for Adonisjs",
+  "description": "Site do Restaurante Tupi",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -29,7 +29,9 @@
     "@adonisjs/session": "^1.0.28",
     "@adonisjs/shield": "^1.0.6",
     "@adonisjs/validator": "^5.0.3",
-    "ioredis": "^3.2.2"
+    "extend": "^3.0.2",
+    "ioredis": "^3.2.2",
+    "typescript": "^3.5.1"
   },
   "devDependencies": {
     "@types/debug": "^0.0.30",
