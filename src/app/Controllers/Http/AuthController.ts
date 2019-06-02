@@ -1,6 +1,0 @@
-
-class AuthController {
-
-}
-
-export = AuthController;

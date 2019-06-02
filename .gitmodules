@@ -1,3 +1,0 @@
-[submodule "typings/@adonisjs"]
-	path = typings/@adonisjs
-	url = https://github.com/tiansin/adonis-typescript
