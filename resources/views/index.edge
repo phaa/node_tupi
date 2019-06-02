@@ -1,7 +1,7 @@
 @layout('templates.layout')
 
 @section('title')
-<title>Blog Tupi</title>
+<title>Restaurante Tupi</title>
 @endsection
 <!-- Index blade -->
 @section('page_content')
@@ -235,11 +235,11 @@
 	<!-- - -->
     <div class="title-review t-center m-b-2">
 		<span class="tit2 p-l-15 p-r-15">
-			Customers Say
+			Veja o que o pessoal diz
 		</span>
 
-		<h3 class="tit8 t-center p-l-20 p-r-15 p-t-3">
-			Review
+		<h3 class="tit8 t-center p-l-20 p-r-15 p-t-3 contact-footer container">
+			Nos avalie também!
 		</h3>
 	</div>
 
@@ -340,6 +340,9 @@
         <div class="elfsight-app-a1a5d7ce-bd3d-49f6-8f13-6d796c99b226"></div>
     </div>
 </section>
+
+@include('components/contact-footer')
+
 @endsection
 
 @section('additional_scripts')
