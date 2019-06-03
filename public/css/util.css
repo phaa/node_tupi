@@ -7729,8 +7729,8 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 .txt26 {
   font-family: Old-Emma;
   font-weight: 500;
-  font-size: 20px;
-  color: #333333;
+  font-size: 23px;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px; }
 
@@ -8090,10 +8090,9 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 */
 .hov-img-zoom {
   display: block;
-  overflow: hidden;
-  width: 90%;
-  height: 90%; }
+  overflow: hidden; }
   .hov-img-zoom img {
+    height: 100%;
     width: 100%;
     -webkit-transition: all 0.6s;
     -o-transition: all 0.6s;
