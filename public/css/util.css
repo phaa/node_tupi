@@ -7443,15 +7443,14 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
   line-height: 1.1;
   color: white;
   text-transform: uppercase;
-  letter-spacing: 10px;
-  word-spacing: 10px;
-  letter-spacing: 0.2em; }
+  text-align: center;
+  letter-spacing: 5px;
+  word-spacing: 10px; }
 
 .tit2 {
   font-family: Old-Emma;
   font-size: 35px;
   line-height: 1.2;
-  letter-spacing: 0.2em;
   color: #43A906; }
 
 .tit3 {
@@ -7486,7 +7485,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 .tit6 {
   font-family: Old-Emma;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 60px;
   line-height: 1.2;
   color: white;
   text-transform: uppercase;
@@ -7532,6 +7531,13 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 /*[ Text ]
 -----------------------------------------------------------
 */
+.txt0 {
+  font-family: Old-Emma;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.1;
+  color: #fff; }
+
 .txt1 {
   font-family: Old-Emma;
   font-weight: 700;

@@ -733,13 +733,13 @@ input[type="date" i] {
 @media (max-width: 768px) {
   .wrap-content-slide1 .tit1 {
     font-size: 70px; }
-  .wrap-content-slide1 .txt1 {
+  .wrap-content-slide1 .txt0 {
     font-size: 60px; } }
 @media (max-width: 576px) {
   .wrap-content-slide1 .tit1 {
-    font-size: 60px; }
-  .wrap-content-slide1 .txt1 {
-    font-size: 50px; } }
+    font-size: 50px; }
+  .wrap-content-slide1 .txt0 {
+    font-size: 40px; } }
 /*[ Button1 ]
 ///////////////////////////////////////////////////////////
 */
@@ -1104,8 +1104,11 @@ body {
   background-size: cover; }
 
 @media (max-width: 576px) {
+  .bg-title-page {
+    height: 100%; }
+
   .bg-title-page .tit6 {
-    font-size: 30px; } }
+    font-size: 42px; } }
 /*[ Item mainmenu ]
 ///////////////////////////////////////////////////////////
 */
@@ -1162,17 +1165,18 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(67, 169, 6, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0; }
   .overlay-item-gallery:hover {
     opacity: 1; }
 
 .btn-show-gallery {
-  font-size: 18px;
+  font-size: 20px;
   color: #43A906;
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  display: flex !important;
   background-color: rgba(0, 0, 0, 0.8); }
 
 @media (max-width: 768px) {

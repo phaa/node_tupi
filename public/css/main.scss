@@ -954,7 +954,7 @@ input[type="date" i] {
     .tit1 {
       font-size: 70px;
     }
-    .txt1 {
+    .txt0 {
       font-size: 60px;
     }
   }
@@ -963,10 +963,10 @@ input[type="date" i] {
 @media (max-width: 576px) {
   .wrap-content-slide1 {
     .tit1 {
-      font-size: 60px;
-    }
-    .txt1 {
       font-size: 50px;
+    }
+    .txt0 {
+      font-size: 40px;
     }
   }
 }
@@ -1409,8 +1409,11 @@ body {
 }
 
 @media (max-width: 576px) {
+  .bg-title-page {
+    height: 100%;
+  }
   .bg-title-page .tit6 {
-    font-size: 30px;
+    font-size: 42px;
   }
 }
 
@@ -1486,7 +1489,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(67,169,6, 0.5);
+  background-color: rgba(0,0,0, 0.5);
   opacity: 0;
   &:hover {
     opacity: 1;
@@ -1494,11 +1497,12 @@ body {
 }
 
 .btn-show-gallery {
-  font-size: 18px;
+  font-size: 20px;
   color: $success;
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  display: flex !important;
   background-color: rgba(0,0,0, 0.8);
 }
 
