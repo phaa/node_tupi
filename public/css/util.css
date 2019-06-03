@@ -8090,7 +8090,9 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 */
 .hov-img-zoom {
   display: block;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 90%;
+  height: 90%; }
   .hov-img-zoom img {
     width: 100%;
     -webkit-transition: all 0.6s;
