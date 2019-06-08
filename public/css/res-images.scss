@@ -1,0 +1,173 @@
+@mixin for-size($size) {
+  @if $size==phone-only {
+    /* 
+      ##Device = Most of the Smartphones Mobiles (Portrait)
+      ##Screen = B/w 320px to 479px
+    */
+    @media (min-width: 320px) and (max-width: 480px) {
+      @content;
+    }
+  }
+  @else if $size==tablet-portrait-up {
+    /* 
+      ##Device = Tablets, Ipads (portrait)
+      ##Screen = B/w 768px to 1024px
+    */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      @content;
+    }
+  }
+  @else if $size==tablet-landscape-up {
+    /* 
+      ##Device = Tablets, Ipads (landscape)
+      ##Screen = B/w 768px to 1024px
+    */
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+      @content;
+    }
+  }
+  @else if $size==desktop-up {
+    /* 
+      ##Device = Laptops, Desktops
+      ##Screen = B/w 1025px to 1280px
+    */
+    @media (min-width: 1025px) and (max-width: 1280px) {
+      @content;
+    }
+  }
+  @else if $size==big-desktop-up {
+    /* 
+      ##Device = Desktops
+      ##Screen = 1281px to higher resolution desktops
+    */
+    @media (min-width: 1281px) {
+      @content;
+    }
+  }
+}
+
+.item-slick1 {
+  background-attachment: fixed;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.slide1 {
+    background-image: url('../images/1800px/deck.jpg');
+
+    @include for-size(phone-only) {
+      background-image: url('../images/480px/deck.jpg');
+    }
+
+    @include for-size(tablet-portrait-up) {
+      background-image: url('../images/1024px/deck.jpg');
+    }
+
+    @include for-size(tablet-landscape-up) {
+      background-image: url('../images/1024px/deck.jpg');
+    }
+
+    @include for-size(desktop-up) {
+      background-image: url('../images/1280px/deck.jpg');
+    }
+  }
+
+  &.slide2 {
+    background-image: url('../images/1800px/ambiente.jpg');
+
+    @include for-size(phone-only) {
+      background-image: url('../images/480px/ambiente.jpg');
+    }
+
+    @include for-size(tablet-portrait-up) {
+      background-image: url('../images/1024px/ambiente.jpg');
+    }
+
+    @include for-size(tablet-landscape-up) {
+      background-image: url('../images/1024px/ambiente.jpg');
+    }
+
+    @include for-size(desktop-up) {
+      background-image: url('../images/1280px/ambiente.jpg');
+    }
+  }
+
+  &.slide3 {
+    background-image: url('../images/1800px/planta.jpg');
+
+    @include for-size(phone-only) {
+      background-image: url('../images/480px/planta.jpg');
+    }
+
+    @include for-size(tablet-portrait-up) {
+      background-image: url('../images/1024px/planta.jpg');
+    }
+
+    @include for-size(tablet-landscape-up) {
+      background-image: url('../images/1024px/planta.jpg');
+    }
+
+    @include for-size(desktop-up) {
+      background-image: url('../images/1280px/planta.jpg');
+    }
+  }
+}
+
+.header-intro {
+  background-attachment: fixed;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.rustic {
+    background-image: url('../images/1800px/salao.jpg');
+    @include for-size(phone-only) {
+      background-image: url('../images/480px/salao.jpg');
+    }
+    @include for-size(tablet-portrait-up) {
+      background-image: url('../images/1024px/salao.jpg');
+    }
+    @include for-size(tablet-landscape-up) {
+      background-image: url('../images/1024px/salao.jpg');
+    }
+    @include for-size(desktop-up) {
+      background-image: url('../images/1280px/salao.jpg');
+    }
+  }
+  &.meet-us {
+    background-image: url('../images/1800px/vale.jpg');
+
+    @include for-size(phone-only) {
+      background-image: url('../images/480px/vale.jpg');
+    }
+
+    @include for-size(tablet-portrait-up) {
+      background-image: url('../images/1024px/vale.jpg');
+    }
+
+    @include for-size(tablet-landscape-up) {
+      background-image: url('../images/1024px/vale.jpg');
+    }
+
+    @include for-size(desktop-up) {
+      background-image: url('../images/1280px/vale.jpg');
+    }
+  }
+  &.the-best {
+    background-image: url('../images/1800px/lago.jpg');
+
+    @include for-size(phone-only) {
+      background-image: url('../images/480px/lago.jpg');
+    }
+
+    @include for-size(tablet-portrait-up) {
+      background-image: url('../images/1024px/lago.jpg');
+    }
+
+    @include for-size(tablet-landscape-up) {
+      background-image: url('../images/1024px/lago.jpg');
+    }
+
+    @include for-size(desktop-up) {
+      background-image: url('../images/1280px/lago.jpg');
+    }
+  }
+}

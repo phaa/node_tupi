@@ -9917,7 +9917,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 
 .txt0 {
   font-family: Old-Emma;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 50px;
   line-height: 1.1;
   color: #fff;
@@ -9961,7 +9961,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
 
 .txt5 {
   font-family: Old-Emma;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 24px;
   color: #222222;
   text-transform: uppercase;
@@ -10024,7 +10024,7 @@ TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT
   font-family: Old-Emma;
   font-weight: 400;
   font-size: 25px;
-  color: #222;
+  color: #ffffff;
   line-height: 1.7;
 }
 
@@ -10651,23 +10651,6 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 
-/*[ Background pattern ]
------------------------------------------------------------
-*/
-
-.bg1-pattern {
-  background-image: url(../images/textures/sackcloth-texture.jpg);
-}
-
-.bg2-pattern {
-  background-image: url(../images/icons/pattern2.png);
-  background-repeat: repeat;
-}
-
-.bg3-pattern {
-  background-image: url(../images/icons/pattern3.png);
-  background-repeat: repeat;
-}
 
 /*[ Hover ]
 -----------------------------------------------------------

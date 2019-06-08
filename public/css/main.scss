@@ -12,70 +12,20 @@ $another-red: #cf2227;
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
-@import url('https://fonts.googleapis.com/css?family=Courgette');
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700');
-
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
-
 @font-face {
   font-family: Montserrat-Regular;
   src: url('../fonts/montserrat/Montserrat-Regular.ttf');
 }
-
 
 @font-face {
   font-family: Montserrat-Bold;
   src: url('../fonts/montserrat/Montserrat-Bold.ttf');
 }
 
-
-@font-face {
-  font-family: Courgette-Regular;
-  src: url('../fonts/courgette/Courgette-Regular.ttf');
-}
-
-
-@font-face {
-  font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf');
-}
-
-
-@font-face {
-  font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf');
-}
-
-
-@font-face {
-  font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf');
-}
-
-
-@font-face {
-  font-family: Poppins-Light;
-  src: url('../fonts/poppins/Poppins-Light.ttf');
-}
-
-
-@font-face {
-  font-family: NotoSans-Regular;
-  src: url('../fonts/notosans/NotoSans-Regular.ttf');
-}
-
 @font-face {
   font-family: Old-Emma;
   src: url('../fonts/old-emma/Old-Emma.ttf');
 }
-
-@font-face {
-  font-family: Bahiana-Regular;
-  src: url('../fonts/bahiana/Bahiana-Regular.otf');
-}
-
-
 
 /*[ RESTYLE TAG ]
 ///////////////////////////////////////////////////////////
@@ -91,6 +41,10 @@ body, html {
   height: 100%;
   font-family: Montserrat, sans-serif;
   font-weight: 400;
+}
+
+section {
+  background-image: url(../images/textures/sackcloth-texture.jpg);
 }
 
 /* ------------------------------------ */
@@ -142,7 +96,7 @@ input {
   outline: none;
   border: none !important;
   transition: all .4s ease;
-  webkit-transition: all .3s ease; /* Safari */
+  -webkit-transition: all .3s ease; /* Safari */
 }
 
 textarea {
@@ -213,66 +167,6 @@ iframe {
   outline: none !important;
 }
 
-/*[ LOADDING ]
-///////////////////////////////////////////////////////////
-*/
-
-.animsition-loading-1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.cp-spinner {
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  box-sizing: border-box;
-  position: relative;
-}
-
-.cp-meter {
-  border-radius: 50%;
-  border-top: solid 6px $success;
-  border-right: solid 6px $success;
-  border-bottom: solid 6px $success;
-  border-left: solid 6px $success;
-  width: 48px;
-  height: 48px;
-  display: inline-block;
-  box-sizing: border-box;
-  &:before {
-    border-radius: 3px;
-    content: " ";
-    width: 6px;
-    height: 12px;
-    display: inline-block;
-    box-sizing: border-box;
-    background-color: $success;
-    position: absolute;
-    top: 5px;
-    left: 16px;
-    transform-origin: center bottom;
-    animation: cp-meter-animate-before 1s linear infinite;
-  }
-}
-
-@keyframes cp-meter-animate-before {
-  0% {
-    transform: rotate(-45deg);
-  }
-
-  100% {
-    transform: rotate(315deg);
-  }
-}
-
-
 /*[ BACK TO TOP ]
 ///////////////////////////////////////////////////////////
 */
@@ -294,18 +188,17 @@ iframe {
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
+  &:hover {
+    cursor: pointer;
+    animation: bounce 0.65s infinite alternate;
+    -webkit-animation: bounce 0.65s infinite alternate;
+  }
 }
 
 .symbol-btn-back-to-top {
   font-size: 30px;
   color: white;
   line-height: 1em;
-}
-
-.btn-back-to-top:hover {
-  cursor: pointer;
-  animation: bounce 1s infinite alternate;
-  -webkit-animation: bounce 1s infinite alternate;
 }
 
 @keyframes bounce {
@@ -378,106 +271,6 @@ input[type="date" i] {
   td {
     width: 60px;
     height: 35px;
-  }
-}
-
-/*[ Select2 ]
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-
-/*[ width select ]
-===========================================================*/
-
-.select2-container {
-  display: block;
-  max-width: 100%;
-  width: auto !important;
-  .select2-selection--single {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    border: 0px solid transparent;
-    border-radius: 10px !important;
-    height: 46px;
-    outline: none;
-  }
-}
-
-/*[ Select ]
-===========================================================*/
-
-.select2-container--focus, .select2-container--below.select2-container--open, .select2-container--above.select2-container--open {
-  border-radius: 10px;
-  box-shadow: 0 0 0px 2px $success;
-  -moz-box-shadow: 0 0 0px 2px $success;
-  -webkit-box-shadow: 0 0 0px 2px $success;
-  -o-box-shadow: 0 0 0px 2px $success;
-  -ms-box-shadow: 0 0 0px 2px $success;
-  .select2-selection--single {
-    border-color: transparent;
-  }
-}
-
-/*[ in select ]
-===========================================================*/
-
-.select2-selection__rendered {
-  font-size: 14px;
-  font-family: Montserrat;
-  font-weight: 400;
-  color: $gray6 !important;
-  padding-left: 20px !important;
-}
-
-.select2-selection__arrow {
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  right: 12px !important;
-}
-
-/*[ dropdown option ]
-===========================================================*/
-
-.select2-dropdown {
-  border: none !important;
-  border-radius: 10px !important;
-  overflow: hidden;
-  box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.1);
-  margin-top: 7px;
-}
-
-.select2-dropdown--above {
-  top: -2px;
-}
-
-.select2-dropdown--below {
-  top: 2px;
-}
-
-.select2-container--default .select2-results__option[aria-selected=true], .select2-container .select2-results__option--highlighted[aria-selected] {
-  background-color: $success;
-  color: $white;
-}
-
-.select2-results__options {
-  font-size: 14px;
-  font-family: Montserrat;
-  font-weight: 400;
-  color: $gray6 !important;
-}
-
-.select2-search--dropdown .select2-search__field {
-  border: 1px solid #aaa !important;
-  outline: none;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 14px;
-  color: $gray6;
-  &:focus {
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    -o-box-shadow: none;
-    -ms-box-shadow: none;
   }
 }
 
@@ -1012,16 +805,6 @@ input[type="date" i] {
   }
 }
 
-/*[ Intro ]
-///////////////////////////////////////////////////////////
-*/
-
-.header-intro {
-  background-attachment: fixed;
-  background-position: center 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 /*[ Slide2 ]
 ///////////////////////////////////////////////////////////
@@ -1620,7 +1403,6 @@ body {
   border-radius: 10px;
   background-color: $success;
 }
-
 
 .contact-footer{
     border-bottom: 3px solid #222;
