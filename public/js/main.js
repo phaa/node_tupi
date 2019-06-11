@@ -26,52 +26,6 @@
     });
 
 
-    /*[ Select ]
-    ===========================================================*/
-    
-
-    /*[ Daterangepicker ]
-    ===========================================================*/
-    $('.my-calendar').daterangepicker({
-        "singleDatePicker": true,
-        "showDropdowns": true,
-        locale: {
-            format: 'DD/MM/YYYY'
-        },
-    });
-
-    var myCalendar = $('.my-calendar');
-    var isClick = 0;
-
-    $(window).on('click',function(){
-        isClick = 0;
-    });
-
-    $(myCalendar).on('apply.daterangepicker',function(){
-        isClick = 0;
-    });
-
-    $('.btn-calendar').on('click',function(e){
-        e.stopPropagation();
-
-        if(isClick == 1) isClick = 0;
-        else if(isClick == 0) isClick = 1;
-
-        if (isClick == 1) {
-            myCalendar.focus();
-        }
-    });
-
-    $(myCalendar).on('click',function(e){
-        e.stopPropagation();
-        isClick = 1;
-    });
-
-    $('.daterangepicker').on('click',function(e){
-        e.stopPropagation();
-    });
-
-
     /*[ Play video 01]
     ===========================================================*/
     var srcOld = $('.video-mo-01').children('iframe').attr('src');
