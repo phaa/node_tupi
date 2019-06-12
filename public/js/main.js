@@ -1,14 +1,6 @@
-
 (function ($) {
     "use strict";
 
-    /*[ Init parallax ]
-    ===========================================================*/
-    $('.parallax100').parallax100();
-
-    /*[ Load page ]
-    ===========================================================*/
-    
     /*[ Back to top ]
     ===========================================================*/
     var windowH = $(window).height()/2;
@@ -24,7 +16,6 @@
     $('#myBtn').on("click", function(){
         $('html, body').animate({scrollTop: 0}, 300);
     });
-
 
     /*[ Play video 01]
     ===========================================================*/
@@ -43,25 +34,18 @@
         $('.video-mo-01').css('opacity','0');
     });
 
-
     /*[ Fixed Header ]
     ===========================================================*/
     var header = $('header');
     var logo = $(header).find('.logo img');
-    var linkLogo1 = $(logo).attr('src');
-    var linkLogo2 = $(logo).data('logofixed');
-
 
     $(window).on('scroll',function(){
         if($(this).scrollTop() > 5 && $(this).width() > 992) {
-            $(logo).attr('src',linkLogo2);
             $(header).addClass('header-fixed');
         }
         else {
             $(header).removeClass('header-fixed');
-            $(logo).attr('src',linkLogo1);
         }
-
     });
 
     /*[ Show/hide sidebar ]
