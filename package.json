@@ -5,6 +5,10 @@
   "description": "Site do Restaurante Tupi",
   "main": "index.js",
   "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "start": "node server.js",
     "test": "node ace test"
   },
@@ -28,7 +32,11 @@
     "@adonisjs/shield": "^1.0.8"
   },
   "devDependencies": {
-    "laravel-mix": "^4.0.12"
+    "laravel-mix": "^4.0.12",
+    "resolve-url-loader": "^2.3.1",
+    "sass": "^1.21.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.10"
   },
   "autoload": {
     "App": "./app"

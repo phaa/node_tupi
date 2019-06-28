@@ -41,6 +41,12 @@ body, html {
   overflow-x: hidden;
   font-family: Montserrat, sans-serif;
   font-weight: 400;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
  
 section {
@@ -680,22 +686,6 @@ input[type="date" i] {
   color: $success;
 }
 
-.btn-show-sidebar {
-  width: 26px;
-  height: 15px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-}
-
-.header-fixed .btn-show-sidebar {
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-}
-
-.btn-show-sidebar:hover {
-  border-top: 2px solid $success;
-  border-bottom: 2px solid $success;
-}
 
 @media (max-width: 1200px) {
   .main_menu > li {
